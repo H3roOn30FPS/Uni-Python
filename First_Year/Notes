@@ -1,0 +1,53 @@
+# Променлива - заделено място в паметта (не обобсобено)
+# input() - вход от User
+# 
+# int() - цяло число
+# float() - десетично число (== Double())
+# str() - текст 
+# complex() - микс от числа и букви
+# bool() - Булева променлива (True = 1 or False = 0)
+
+
+""" 
+a = 5
+b = float(input("Въведи b: "))
+result = a + b
+print (result)
+print ("Резултат: ", result)
+print(f"Имам {a} лв. и {b} евро.")
+print(f"Ресто: {b:.2f} лева.")             //// Ресто: xxx.xx лева.
+print("Резултат: ", a * b)
+"""
+
+
+###
+# +, -, *, / (десетично деление), // (целочислено деление), % (Деление с остатък), ==, >=, <=, **
+# Пример: 5/2 = 2.5; 5//2 = 2; 5%2 = 1
+###
+
+"""
+if condition1 and condition 2:        #if either one of the conditions isn't met - skip function
+    |block of code
+elif condition3 or condition4:        #if one of the conditions is met, we pass to the function
+    |another block of code
+else:
+    |last block of code               #if none of the conditions above were met, then we do "this" code instead
+"""
+# Example code
+"""
+b = float (imput())
+if b > 5:
+    print ("up")
+elif b < 5:
+    print("down")
+else:
+    print ("ok")
+"""
+
+
+
+
+"""
+b % 2 == 0
+b % 2 != 1
+"""
