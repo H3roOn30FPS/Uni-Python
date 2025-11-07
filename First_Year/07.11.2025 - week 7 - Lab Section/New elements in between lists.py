@@ -15,13 +15,18 @@ numbers = []
 for i in range(newn):
     num = int(input(f"Enter number {i+1}: "))
     numbers.append(num)
-
-new_list = []
-for i in range(len(numbers) - 1):
-    new_list.append(numbers[i])
-    new_list.append(numbers[i] + numbers[i + 1])
-
-new_list.append(numbers[-1])
-
 print("Original list:", numbers)
-print("New list:", new_list)
+i = 0
+while i < len(numbers) - 1:
+    sum_two = numbers[i] + numbers[i + 1]
+    numbers.insert(i + 1, sum_two)
+    i += 2   # skip over the number we just inserted
+print("Final list:", numbers)
+
+'''
+#Colleague's take
+for i in range(len(numbers)):
+    if i % 2 == 0
+        numbers.insert(i+1, (numbers[i] + numbers[i+1]))
+print(numbers)
+'''
