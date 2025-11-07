@@ -1,0 +1,40 @@
+import mysql.connector #needs prior terminal command: pip install mysql-connector-python
+
+mydb = mysql.connector.connect(
+    host = "localhost",
+    user = "user",
+    password = "none",
+    database = "Universoty"
+)
+
+mycursor = mydb.cursor()
+
+mycursor.execute("CREATE TABLE customers (name VARCHAR(255), address VARCHAR(255))")
+
+#mycursor.execute("SHOW TABLES")
+
+for x in mycursor:
+    print(x)
+
+# Inserting items in tables in DB
+#
+#   sql = "INSERT INTO customers (name, address) VALUES (%s, %s)"
+#   val = ("Jhin, "Summoners Rift 4")
+#   
+#   mycursor.execute(sql, val)
+#   mydb.commit
+#   print (mycursor.rowcount(???))
+
+# Selection in DB from table
+#
+#   sql = "SELECT * FROM customers WHERE address = 'Summoners Rift 4'" #Returns from table: " 1, Jhin, 'S..R.. 4' "
+#   mycursor.execute(sql)
+#   myresult = mycursor.fetchall()
+#   for x in myresult:
+#       print(x)
+
+# Updating items in DB
+#
+#   sql = "UPDATE customers SET address = 'Summoners Rift 4' WHERE address = 'ARAM 4'"
+#   mycursor.execute(sql)
+#   mydb.commit()
