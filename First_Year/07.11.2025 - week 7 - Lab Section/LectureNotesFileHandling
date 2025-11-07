@@ -1,0 +1,115 @@
+#File handling
+#
+#   "r" - Read. Default value.
+#   "a" - Append/Add element. Opens the file for appending, creates the file if it does not exist.
+#   "w" - Write. Opens the file for writing. (Creates the file if it does not exist!)
+#   "x" - Create. Creates specified file. (Returns an error if the file exists!)
+
+#Default Values
+#   "t" - Text (Default / Text mode)
+#   "b" - Binary (for Images or similar)
+
+# Read(r) and Text(t) are default values and do not need to be specified
+'''
+Example:
+file = open("Note.txt", "rt" /"r" /"t" ) 
+
+is the same as:
+
+file = open("Note.txt")
+----------------------------------------------------------------------------------
+'''
+#Exsample:
+file = open("Note.txt") 
+
+content =  file.read() #Reads the whole file
+for line in file:   #Reads every line in .txt  // Loops untill the end of the file
+    print(line)
+partial_content = file.read(10) #Reads 10 symbols
+
+file = open('ex.txt', 'w')  #Opens file for writing
+file.write('I am new here!\n')  # Writes this text...
+file.write('Me too!\n')     # ...and this one too!
+
+file.close() #Closes the file and saves the changes
+
+'''
+-----------------------------------------------------------------------------------
+with open('ex.txt', 'r') as file:
+    content = file.read()
+    print(content)
+'''
+#----------------------------------------------------------------------------------
+'''
+import csv
+## We Create(and/or write) in out .csv file
+with open('ex.csv', 'w', newline='' ) as csvfile:
+    writer = csv.writer(csvfile)
+    writer.writerow(['Name', 'Age'])    # ~Write row~
+    writer.writerow(['Alice', '30'])    
+
+## We check out the new-made changes
+with open('ex.csv', 'r') as csvfile:
+    reader = cvs.reader(csvfile)
+    for row in reader:
+        print(row)
+'''
+
+#----------------------------------------------------------------------------------
+#Opening file from path:
+'''
+f = open("D:\\myfiles\ex.txt")
+print(f.read())
+f.close()
+
+#or
+
+with open("demofile.txt") as f:
+  print(f.read())
+f.close()
+
+###
+#Reads the set amount of charecters
+with open("demofile.txt") as f:
+  print(f.read(5))
+
+###  
+# Reads the first 2 lines of the said file
+with open("demofile.txt") as f:
+  print(f.readline())
+  print(f.readline())
+------------------------------------------------------------------------------------
+'''
+
+#Writing / Appending to files
+'''
+with open("demofile.txt", "a") as f:
+  f.write("Now the file has more content!")
+with open("demofile.txt") as f:
+  print(f.read())
+
+#Overwrites the entire file
+with open("demofile.txt", "w") as f:
+  f.write("Woops! I have deleted the content!")
+with open("demofile.txt") as f:
+  print(f.read())
+
+#File creation happens like this:
+f = open("myfile.txt", "x")
+-------------------------------------------------------------------------------------
+'''
+
+#Deleting files
+'''
+import os
+os.remove("ex.txt")
+
+#Check if file exists, then delete it:
+if os.path.exists("demofile.txt"):
+  os.remove("demofile.txt")
+else:
+  print("The file does not exist")
+
+#Remove the folder "myfolder"
+os.rmdir("myfolder")
+'''
