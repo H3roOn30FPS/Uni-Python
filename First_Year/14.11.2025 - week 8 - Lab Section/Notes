@@ -1,0 +1,59 @@
+#Functions:
+'''
+print(13)
+print(14)
+def myF(a, b):
+    result = a * b
+    print(result)
+    return result, z, n     #' return' can return multiple variables at once
+print(15)
+myF(5, 6)
+print(16)
+print(myF(3, 4))
+
+//\\//
+
+def myF(a = 7, b = 5):
+    result = a * b
+    print(result)
+    return result
+myF()
+...
+print(myF())
+myF(b = 17, a = int(input()))
+
+-------------------------------------------------------------------------------------------
+
+##Importing local libraries
+##ex: import myM  #in this context 'myM' has a lot of functions stored
+
+-------------------------------------------------------------------------------------------
+
+l1 = [1, 2, 3]
+l2 = [4, 5, 6]
+l3 = [17, 30, 4]
+class List      #Classes can hold a bunch of functions which can be called/accessed later
+    def appened():
+        #code
+    def insert():
+        #more code
+    def sort():
+        #even more code
+
+l1.append(8)
+l1.insert(1, 30)
+
+//\\//
+
+class List
+    def sort(reverse = False):
+        #code
+l3.sort(reverse = True)
+...
+
+-----------------------------------------------------------------------------------------------
+
+len(l2)     #-> will print "3"
+print(len(l2))
+for i in range(len(l2))     #-> 3 interactions
+'''
