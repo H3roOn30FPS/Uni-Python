@@ -27,3 +27,26 @@ elif user == "scissors" and computer == "paper":
     print("You win!")
 else:
     print("Computer wins!")
+
+##########################################################################################################################
+# Solution using lists
+'''
+import random
+
+choices = ["камък", "ножица", "хартия"]
+user_choice = input("Изберете камък, ножица или хартия: ")
+
+if user_choice not in choices:
+    print("Невалиден избор")
+else:
+    computer_choice = random.choice(choices)
+    print(f"Компютърът избра: {computer_choice}")
+    if user_choice == computer_choice:
+            print("Равенство!")
+    elif (user_choice == "камък" and computer_choice == "ножица") or \
+            (user_choice == "ножица" and computer_choice == "хартия") or \
+            (user_choice == "хартия" and computer_choice == "камък"):
+            print("Поздравления! Вие печелите!")
+    else:
+            print("Компютърът печели!")
+'''
