@@ -1,1 +1,63 @@
-Refer to me...
+#We were asked to write a program with an empty list. We enter 5 elements, and the programme removes the
+#odd numbers.
+#==================================================================================
+# list_1 = []
+
+# for n in range(5):
+#     n = float(input(f"№ {n+1}:"))
+#     list_1.append(n)
+
+# for i in list_1:
+#     if i % 2 == 0:
+#         continue
+#     else:
+#         list_1.remove(i)
+
+# print(list_1)
+
+
+
+'''
+class Person:
+    def __init__ (self, fname, lname, age, nationality):
+        self.fname = fname
+        self.lname = lname
+        self.age = age
+        self.nationality = nationality
+
+    def printInfo(self):
+        print(self.fname, self.age)
+
+    def change_age(slef):
+        newage = int(input())
+        self.age = newage
+
+P1 = Person("Ivan", "Ivanov", 20, "BG")            
+P2 = Person("Erik", "Jones", 30, "UK")
+
+P1.printInfo()      -> Ivan, 20
+P2.change_age()     -> 31 ->
+
+==============================================================
+==============================================================
+## inheritance  ##
+
+class Student(Person):
+    def __init__(self, fname, lname, age, nationality, uni, group, faculty_number):
+        super().__init__(fname, lname, age, nationality)        ## (2)
+        self.uni = uni
+        self.group = group
+        self.faculty_number = factulty_number
+
+        Person.__init__(self, fname, lname, age, nationality)   ## (2)
+
+    def printInfo(self):
+        print(self.lname, self.age, self.uni, self.group)
+    
+S1 = Student("Georgi", "Todorov", 22, "BG", "TU", 90, 034)
+S2 = Student("Jacob", "Stevenson", 20, "US", "SU", 191, 154)
+
+S1.printInfo()      -> ...
+S2.printInfo()      -> ...
+S2.change_age()     -> ...
+'''
