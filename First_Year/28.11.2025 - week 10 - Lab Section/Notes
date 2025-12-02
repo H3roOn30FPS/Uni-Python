@@ -1,1 +1,36 @@
-:P
+#try:...  except:...
+
+'''
+x = 2
+try:            #Can contain a block of code we want to run
+    print(x)    #Passes successfully
+    print(y)    #Hits an error and goes to 'exept'
+except:         #Will return an "Error" message if the condition in 'try:' isn't met 
+    print("Something went wrong!")
+finally:        #Will run whenever the program ends
+    print("Bye-bye!")
+
+# 
+#  'except' can have a specific name for handling errors
+try:
+    print(x / 0)
+except ZeroDivisionError as err:    #'ZeroDivisionError' is built-in
+    print("You can't do that! You tried:", err)    #-> You can't do that! You tried: division by zero
+
+
+try:
+    if x / 0:    
+        raise Exception("Nuh-uh! No zero devesions!")   #Calls our Exception since the code falls under our exception
+else:
+    print("Ok!")
+
+try:
+    x = 'Hello!'   
+    if x / 0:
+    raise TypeException("Nuh-uh! Wrong type, brother!")   #Returns a "Type Error" since the type is not wrong
+else:
+    print("Ok!")
+
+*P.S. Note: I wasn't able to copy the source code from the shared screen, and I lack some "if's" for a better understanding of the
+function of this code*
+'''
