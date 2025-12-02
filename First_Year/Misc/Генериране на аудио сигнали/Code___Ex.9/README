@@ -1,1 +1,22 @@
-,
+Activity Purpose: Software-Defined Audio Signal Generation
+This activity is Laboratory Exercise No. 9 for the "Fundamentals of Engineering Design" course. Its primary purpose is to teach you how to use software (specifically Python) to bridge the gap between mathematical theory and practical audio synthesis.
+
+The specific goals of this activity are:
+
+1. Generating Basic Audio Signals The activity is designed to teach you how to mathematically generate the waveforms of four specific audio signals using code:
+
+Sine Wave: A pure tone representing the fundamental frequency.
+
+Rectangular (Square) Wave: A complex tone often used in digital signals.
+
+Triangular Waves (Asymmetric & Symmetric): Waveforms with linear amplitude changes used in synthesizers.
+
+2. Visualizing and Analyzing Signals You are learning to move beyond just "hearing" sound to visually analyzing it in two domains:
+
+Time Domain: Visualizing the waveform shape over time to verify the period and amplitude.
+
+Frequency Domain (Spectrum): Using Fast Fourier Transform (FFT) to calculate the signal's spectrum. This helps you understand the difference between a "pure" sound (sine wave with one peak) and "rich" sounds (square/triangle waves with multiple harmonic peaks).
+
+3. Practical Application (Music Synthesis) The final goal is to apply these signal generation techniques creatively. By defining specific frequencies (notes) and durations, you learn to synthesize a complete musical composition (in this case, "Für Elise") solely through code, without recording real instruments.
+
+4. Understanding Technical Parameters The exercise reinforces the importance of the sampling rate (set to 44,100 Hz in your code), which determines the quality and accuracy of the digital audio representation.
